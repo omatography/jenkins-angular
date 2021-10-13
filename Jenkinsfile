@@ -1,6 +1,6 @@
 pipeline {
   tools {
-    nodejs 'Node16'
+    nodejs 'node16'
   }
     agent any
     stages {
@@ -17,7 +17,7 @@ pipeline {
             }
         }
 
-        
+
         stage('Test') {
             steps {
                 echo 'Testing..'
