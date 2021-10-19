@@ -14,14 +14,19 @@ pipeline {
             steps {
                 echo 'Install deps..'
                 bat 'npm install'
+                emailext body: 'Test Message',
+                subject: 'Installed Dependancies',
+                to: 'omkarrsurve21@gmail.com'
             }
         }
-
 
         stage('Test') {
             steps {
                 echo 'Testing..'
                 bat 'npm test'
+                emailext body: 'Test Message',
+                subject: 'Installed Dependancies',
+                to: 'omkarrsurve21@gmail.com'
             }
         }
         stage('Package') {
