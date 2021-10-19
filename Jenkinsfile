@@ -7,13 +7,13 @@ pipeline {
         stage('Check version') {
             steps {
                 echo 'Cleaning..'
-                bat 'npm --version'
+                // bat 'npm --version'
             }
         }
         stage('Install dependencies') {
             steps {
-                echo 'Install deps..'
-                bat 'npm install'
+                // echo 'Install deps..'
+                // bat 'npm install'
                 emailext body: 'Test Message',
                 subject: 'Installed Dependancies',
                 to: 'omkarrsurve21@gmail.com'
@@ -22,8 +22,8 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo 'Testing..'
-                bat 'npm test'
+                // echo 'Testing..'
+                // bat 'npm test'
                 emailext body: 'Test Message',
                 subject: 'Installed Dependancies',
                 to: 'omkarrsurve21@gmail.com'
